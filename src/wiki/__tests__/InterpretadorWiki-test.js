@@ -1,5 +1,5 @@
+/* eslint-disable quotes*/
 import * as InterpretadorWiki from '../InterpretadorWiki';
-import dados from '../__mock__/dados';
 
 test('Deve normalizar corretamente os textos', () => {
     let texto = '**O presidente português [[Sidónio Pais]] é [[Sidónio Pais#Assassinato|assassinado]] na estação ferroviária do Rossio, Lisboa.';
@@ -51,3 +51,4 @@ test('Deve normalizar corretamente os textos', () => {
     expect(resultado).toEqual(esperado);
 
 });
+/* eslint-enable quotes*/

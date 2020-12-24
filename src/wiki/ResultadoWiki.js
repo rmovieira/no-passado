@@ -33,12 +33,6 @@ export default class ResultadoWiki extends React.Component {
 
     render() {
         const { tema, fato, resumo, miniatura } = this.props.resultado;
-        // "thumbnail": {
-        // "height": 180,
-        //  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Praia_de_Pi%C3%A7arras.jpg/320px-Praia_de_Pi%C3%A7arras.jpg",
-        //   "width": 320
-        // },
-        console.log('---', fato);
         return (
             <View>
                 <ScrollView>
@@ -51,7 +45,6 @@ export default class ResultadoWiki extends React.Component {
                             resizeMode={'contain'}
                             style={estilo.imagem}
                             source={{ uri: miniatura.source }}
-                        // source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Praia_de_Pi%C3%A7arras.jpg/320px-Praia_de_Pi%C3%A7arras.jpg' }}
                         />
                     }
                     <HTML source={{ html: `<p>${fato}</p>` }} contentWidth={450}
