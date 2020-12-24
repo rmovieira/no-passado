@@ -1,0 +1,87 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "react-native/react-native": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:jest/style"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        },
+        "ecmaVersion": 2021,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-native",
+        "jest",
+        "detox"
+    ],
+    "rules": {
+        "no-console": "off",
+        "quotes": [
+            "error",
+            "single"
+        ],
+        // "react/no-did-mount-set-state": 2,
+        "react/no-direct-mutation-state": 2,
+        "react/jsx-uses-vars": 2,
+        "no-undef": 2,
+        "semi": 2,
+        "react/jsx-wrap-multilines": [
+            "error",
+            {
+                "declaration": "parens",
+                "assignment": "parens",
+                "return": "parens",
+                "arrow": "parens",
+                "condition": "ignore",
+                "logical": "ignore",
+                "prop": "ignore"
+            }
+        ],
+        "react/prop-types": 2,
+        "react/jsx-no-bind": 2,
+        "react/jsx-no-duplicate-props": 2,
+        "comma-dangle": 0,
+        "react/display-name": 1,
+        "no-unused-vars": "warn",
+        "no-unexpected-multiline": "warn",
+        "react-native/no-unused-styles": 2,
+        "react-native/split-platform-components": 0,
+        "react-native/no-inline-styles": 2,
+        "react-native/no-color-literals": 0,
+        "react-native/no-raw-text": 2,
+        "react-native/no-single-element-style-arrays": 2,
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "15.6.1"
+        },
+        "jest": {
+            "version": 26
+        }
+    },
+    "globals": {
+        "GLOBAL": false,
+        "it": false,
+        "expect": false,
+        "describe": false
+    }
+}
