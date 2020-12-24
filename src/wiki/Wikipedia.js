@@ -39,7 +39,6 @@ export const recuperarResultadoAleatorio = async texto => {
     const fatos = resultado[chaves[chaveTema]];
     const chaveFato = gerarNumeroAleatorio(fatos.length);
 
-    console.log(chaveTema, chaveFato);
     const fatoEscolhido = fatos[chaveFato];
     const { texto: fato, links } = InterpretadorWiki.normalizar(fatoEscolhido);
     if (links.length >= 2 && !links[0].match(/\D/g)) {

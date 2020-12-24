@@ -58,15 +58,15 @@ export default class App extends React.Component {
     );
   }
 
-  setSelectedDate = data => {
+  selecionarData = data => {
     this.setState({ data });
   }
 
-  setModalVisible = () => {
+  mostrarOuEsconderResultado = () => {
     this.setState({ mostrarResultado: !this.state.mostrarResultado });
   }
 
-  montarModal = () => {
+  mostrarResultado = () => {
     return (
 
       <Modal
@@ -76,13 +76,13 @@ export default class App extends React.Component {
         onShow={this.onShow}
         ref={this.modal}
       >
-        <View style={styles.centeredView} onLayout={this.onLayout}>
-          <View style={styles.modalView}>
+        <View style={estilo.centeredView} onLayout={this.onLayout}>
+          <View style={estilo.modalView}>
             <Pressable
-              style={styles.fecharResultado}
-              onPress={this.setModalVisible}
+              style={estilo.fecharResultado}
+              onPress={this.mostrarOuEsconderResultado}
             >
-              <Text style={styles.textStyle}>X</Text>
+              <Text style={estilo.textStyle}>X</Text>
             </Pressable>
             {this.montarResultado()}
           </View>
@@ -92,12 +92,11 @@ export default class App extends React.Component {
   }
 
   render() {
-
     return (
       <>
         <SafeAreaView>
           <DateSelectionCalendar
-            onSelectDate={this.setSelectedDate}
+            onSelectDate={this.selecionarData}
             selectedDate={this.state.data}
             locale={portuguesBrasileiro}
             theme={CustomTheme}
@@ -108,13 +107,13 @@ export default class App extends React.Component {
             color={'black'}
           />
         </SafeAreaView>
-        {this.montarModal()}
+        {this.mostrarResultado()}
       </>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const estilo = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: 'center',

@@ -22,7 +22,7 @@ export default class ResultadoWiki extends React.Component {
         mostrarMais: false,
     }
 
-    onLinkPress = (_, href) => {
+    abrirLink = (_, href) => {
         Linking.openURL(href);
     }
 
@@ -48,7 +48,7 @@ export default class ResultadoWiki extends React.Component {
                         />
                     }
                     <HTML source={{ html: `<p>${fato}</p>` }} contentWidth={450}
-                        onLinkPress={this.onLinkPress}
+                        onLinkPress={this.abrirLink}
                         tagsStyles={{
                             p: { fontSize: 18 },
                             a: { fontSize: 18 },

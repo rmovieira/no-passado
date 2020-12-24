@@ -132,7 +132,6 @@ export const normalizar = fato => {
         });
 
     }
-    console.log('textoNormalizado', textoNormalizado);
     links = links.map(item => obterLinkDoTexto(item.link));
     links = [...new Set(links)];
     return {
